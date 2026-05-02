@@ -1,0 +1,163 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Lovely Mahal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9ecf,#ffcce6,#ffe6f2);
+    position:relative;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-20px;
+    width:20px;
+    height:20px;
+    background:#ff4d88;
+    transform:rotate(45deg);
+    animation:float 8s linear infinite;
+    opacity:.7;
+}
+.heart::before,
+.heart::after{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#ff4d88;
+    border-radius:50%;
+}
+.heart::before{ top:-10px; left:0; }
+.heart::after{ left:-10px; top:0; }
+
+@keyframes float{
+    0%{transform:translateY(0) rotate(45deg);opacity:0;}
+    20%{opacity:.8;}
+    100%{transform:translateY(-110vh) rotate(45deg);opacity:0;}
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,.15);
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+    color:#fff;
+    font-size:32px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px rgba(255,255,255,.8);
+}
+
+.name{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.pic{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:auto;
+    border:6px solid #fff;
+    box-shadow:0 0 25px rgba(255,255,255,.8);
+    animation:pulse 2s infinite;
+}
+
+.pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+p{
+    margin-top:20px;
+    color:#fff;
+    font-size:16px;
+}
+
+a{
+    display:inline-block;
+    margin-top:28px;
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:50px;
+    background:#fff;
+    color:#ff4d88;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(255,255,255,.4);
+}
+
+a:hover{
+    transform:scale(1.08);
+    background:#ff4d88;
+    color:#fff;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Hearts -->
+<div class="heart" style="left:10%;animation-delay:0s;"></div>
+<div class="heart" style="left:25%;animation-delay:2s;"></div>
+<div class="heart" style="left:40%;animation-delay:4s;"></div>
+<div class="heart" style="left:60%;animation-delay:1s;"></div>
+<div class="heart" style="left:75%;animation-delay:3s;"></div>
+<div class="heart" style="left:90%;animation-delay:5s;"></div>
+
+<div class="container">
+    <h1>For My Lovely Mahal 💖</h1>
+    <div class="name">Khate</div>
+
+    <div class="pic">
+        <!-- PALITAN MO LANG IMAGE -->
+        <img src="mark.jpg">
+    </div>
+
+    <p>You are the most beautiful part of my life ✨</p>
+
+    <a href="index1.html">Next ➜</a>
+</div>
+
+</body>
+</html>

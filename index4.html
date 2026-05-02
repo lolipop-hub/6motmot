@@ -1,0 +1,177 @@
+<!-- index4.html FINAL UPDATED -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise My Love</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff6fa9,#ffb6d9,#fff0f7);
+    padding:20px;
+    position:relative;
+}
+
+/* floating hearts */
+.heart{
+    position:absolute;
+    bottom:-30px;
+    font-size:24px;
+    animation:up linear infinite;
+}
+@keyframes up{
+    0%{transform:translateY(0);opacity:0;}
+    20%{opacity:1;}
+    100%{transform:translateY(-120vh);opacity:0;}
+}
+
+.card{
+    width:95%;
+    max-width:550px;
+    padding:35px;
+    border-radius:30px;
+    text-align:center;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(14px);
+    box-shadow:0 10px 40px rgba(0,0,0,.15);
+    z-index:2;
+}
+
+h1{
+    color:white;
+    font-size:34px;
+    text-shadow:0 0 10px rgba(255,255,255,.8);
+}
+
+.photo{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:18px auto;
+    border:6px solid white;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+#text{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+    margin-top:18px;
+}
+
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d88;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff4d88;
+    color:white;
+}
+
+.final{
+    margin-top:18px;
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+}
+
+#videoBox{
+    display:none;
+    margin-top:20px;
+    animation:fade .8s ease;
+}
+
+video{
+    width:100%;
+    border-radius:20px;
+}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<div class="heart" style="left:10%;animation-duration:8s;">💖</div>
+<div class="heart" style="left:25%;animation-duration:6s;">💕</div>
+<div class="heart" style="left:45%;animation-duration:9s;">💘</div>
+<div class="heart" style="left:65%;animation-duration:7s;">💗</div>
+<div class="heart" style="left:85%;animation-duration:10s;">💞</div>
+
+<div class="card">
+
+<h1>Final Surprise 💌</h1>
+
+<div class="photo">
+    <img src="LOVE.jpg">
+</div>
+
+<div id="text">
+Mahal You are my happiness, peace, and forever love. 💖
+</div>
+
+<button onclick="showLove()">Click Me Mahal ❤️</button>
+
+<div class="final" id="final"></div>
+
+<!-- VIDEO -->
+<div id="videoBox">
+    <video id="myVideo" controls>
+        <source src="HIII.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgmusic" loop>
+    <source src="libo.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function showLove(){
+
+    document.getElementById("final").innerHTML =
+    "HAPPY 6TH MONTHSARY MAHAL KO!! 🎉🎊💖 I LOVE YOU SO MUCHHH FOREVER AND ALWAYS 🥰💍";
+
+    document.getElementById("videoBox").style.display = "block";
+
+    document.getElementById("myVideo").play();
+
+    document.getElementById("bgmusic").play();
+}
+</script>
+
+</body>
+</html>
